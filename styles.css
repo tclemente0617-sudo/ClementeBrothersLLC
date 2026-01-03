@@ -36,11 +36,28 @@ body{
   padding:12px 0;
 }
 .brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  text-decoration:none;
+}
+.brand .logo{
+  height:52px;
+  width:auto;
+  display:block;
+  border-radius:6px;
+  background:rgba(255,255,255,0);
+}
+.brand-text{
   font-weight:700;
   color:#fff;
-  font-size:20px;
+  font-size:18px;
   letter-spacing:0.6px;
+  line-height:1;
 }
+
+/* Toggle and nav */
 .nav-toggle{
   display:none;
   background:transparent;
@@ -55,9 +72,10 @@ body{
 
 /* Hero */
 .hero{
-  min-height:320px;
-  background-image:linear-gradient(to right bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.15)), url('https://images.pexels.com/photos/776615/pexels-photo-776615.jpeg');
-  background-size:cover;
+  min-height:360px;
+  background-image:linear-gradient(to right bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.05)), url('assets/logo.png');
+  background-size:contain;
+  background-repeat:no-repeat;
   background-position:center;
   display:flex;
   align-items:center;
@@ -67,9 +85,10 @@ body{
   width:100%;
   padding:48px 20px;
   text-align:center;
+  backdrop-filter: none;
 }
 .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 10px}
-.hero-sub{margin:0 0 16px;color:rgba(255,255,255,0.9)}
+.hero-sub{margin:0 0 16px;color:rgba(255,255,255,0.95);font-weight:600}
 .hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
 .btn{
   display:inline-block;
@@ -115,6 +134,7 @@ body{
 }
 .small{font-size:12px}
 .muted{color:var(--muted)}
+.service-note{margin-top:12px;color:var(--muted);font-weight:600}
 
 /* Footer */
 .site-footer{padding:18px 0;margin-top:24px}
@@ -124,15 +144,20 @@ body{
 /* Responsive */
 @media (max-width:900px){
   .contact-grid{grid-template-columns:1fr}
+  .brand .logo{height:46px}
 }
 @media (max-width:740px){
   .main-nav{display:none}
   .nav-toggle{display:inline-block}
   .header-inner{gap:8px}
   .phone-cta{display:none}
+  .brand-text{font-size:16px}
 }
 @media (max-width:480px){
   .hero-overlay{padding:32px 12px}
   .hero h1{font-size:22px}
+  /* On very small screens keep logo but shorten text to avoid wrap */
+  .brand-text{display:none}
+  .brand{gap:8px}
 }
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
