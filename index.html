@@ -1,157 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Clemente Brothers Commercial Services</title>
-  <style>
-    /* 🌟 Global Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      color: #222;
-    }
-    a { text-decoration: none; color: inherit; }
-
-    .container {
-      width: min(100% - 40px, 1200px);
-      margin: auto;
-      padding: 20px 0;
-    }
-
-    /* ===== Header ===== */
-    header {
-      background: #0f3d91;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 26px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    /* ===== Hero / Banner ===== */
-    .hero {
-      background: url('https://images.pexels.com/photos/776615/pexels-photo-776615.jpeg') no-repeat center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-      margin-bottom: 30px;
-    }
-    .hero h1 {
-      color: white;
-      font-size: 48px;
-    }
-
-    /* ===== Services ===== */
-    .services {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-    }
-    .services h2 {
-      text-align: center;
-      color: #0f3d91;
-    }
-    .services-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .services-list div {
-      background: #eef2f7;
-      padding: 15px;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    /* ===== What We Service ===== */
-    .service-areas {
-      margin-top: 20px;
-      display: grid;
-      gap: 10px;
-    }
-
-    /* ===== Contact Section ===== */
-    .contact {
-      text-align: center;
-      background: #0f3d91;
-      color: white;
-      padding: 40px 20px;
-      border-radius: 8px;
-    }
-    .contact h2 {
-      margin-bottom: 15px;
-    }
-    .contact a {
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #555;
-    }
-  </style>
+  <meta name="description" content="Clemente Brothers Commercial Services — professional commercial cleaning: janitorial, restroom sanitation, floor care, trash removal and more." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Clemente Brothers</a>
 
-  <header>
-    CLEMENTE BROTHERS COMMERCIAL SERVICES
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" id="navToggle">
+        ☰
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#areas">We Service</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="phone-cta" href="tel:7323144695" aria-label="Call Clemente Brothers">📞 732-314-4695</a>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Professional Commercial Cleaning You Can Rely On</h1>
-  </section>
-
-  <div class="container">
-
-    <!-- SERVICES -->
-    <section class="services">
-      <h2>OUR SERVICES</h2>
-      <div class="services-list">
-        <div>Janitorial Cleaning</div>
-        <div>Restroom Sanitation</div>
-        <div>Trash Removal</div>
-        <div>Floor Care (Sweep, Mop, Vacuum)</div>
-        <div>Common-Area Maintenance</div>
-      </div>
-
-      <h2 style="margin-top:30px;">WE SERVICE:</h2>
-      <div class="service-areas">
-        <div>Office Buildings</div>
-        <div>Retail Plazas</div>
-        <div>Medical & Professional Offices</div>
-        <div>Commercial Properties</div>
+  <main>
+    <section class="hero">
+      <div class="hero-overlay">
+        <h1>Professional Commercial Cleaning You Can Rely On</h1>
+        <p class="hero-sub">Locally owned & operated — free walkthroughs and quotes available</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Get a Free Quote</a>
+          <a class="btn" href="tel:7323144695">Call/Text: 732-314-4695</a>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact">
-      <h2>NOW ACCEPTING NEW COMMERCIAL CLIENTS</h2>
-      <p>Locally Owned & Operated</p>
-      <p>Free Walkthroughs & Quotes Available</p>
-      <a href="tel:7323144695">📞 Call/Text: 732-314-4695</a>
-    </section>
-  </div>
+    <div class="container">
 
-  <footer>
-    © 2025 Clemente Brothers Commercial Services
+      <section id="services" class="card services">
+        <h2>Our Services</h2>
+        <p class="muted">Comprehensive commercial cleaning tailored to your business.</p>
+
+        <div class="services-grid" aria-hidden="false">
+          <div class="service">
+            <h3>Janitorial Cleaning</h3>
+            <p>Daily or scheduled cleaning to keep your workplace welcoming and healthy.</p>
+          </div>
+
+          <div class="service">
+            <h3>Restroom Sanitation</h3>
+            <p>Thorough, hygienic restroom cleaning & supplies handling.</p>
+          </div>
+
+          <div class="service">
+            <h3>Trash Removal</h3>
+            <p>Routine removal and responsible disposal.</p>
+          </div>
+
+          <div class="service">
+            <h3>Floor Care</h3>
+            <p>Sweeping, mopping, vacuuming, and specialty floor treatment plans.</p>
+          </div>
+
+          <div class="service">
+            <h3>Common-Area Maintenance</h3>
+            <p>Lobby, break rooms, hallways and shared spaces maintained to professional standards.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="areas" class="card areas">
+        <h2>We Service</h2>
+        <ul>
+          <li>Office Buildings</li>
+          <li>Retail Plazas</li>
+          <li>Medical & Professional Offices</li>
+          <li>Commercial Properties</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="card contact">
+        <h2>Now Accepting New Commercial Clients</h2>
+        <p>Free walkthroughs & quotes — locally owned & operated</p>
+
+        <div class="contact-grid">
+          <div>
+            <p class="contact-line">Call or Text:</p>
+            <a class="phone-large" href="tel:7323144695">📞 732-314-4695</a>
+            <p class="muted">Or use the form to send a quick message to your email client.</p>
+          </div>
+
+          <form id="contactForm" class="contact-form" aria-label="Contact form">
+            <label>
+              Your name
+              <input type="text" name="name" id="name" placeholder="Your name" required />
+            </label>
+
+            <label>
+              Business / Company
+              <input type="text" name="company" id="company" placeholder="Company (optional)" />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" id="message" rows="4" placeholder="Tell us about your facility or request" required></textarea>
+            </label>
+
+            <button type="submit" class="btn primary">Send via Email</button>
+            <p class="muted small">This opens your email client with the message prefilled (no data is sent to the server).</p>
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="copy-year"></span> Clemente Brothers Commercial Services</small>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>

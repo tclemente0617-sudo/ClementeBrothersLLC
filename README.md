@@ -1,158 +1,30 @@
-# ClementeBrothersLLC
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Clemente Brothers Commercial Services</title>
-  <style>
-    /* 🌟 Global Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      color: #222;
-    }
-    a { text-decoration: none; color: inherit; }
+# Clemente Brothers — Static Site
 
-    .container {
-      width: min(100% - 40px, 1200px);
-      margin: auto;
-      padding: 20px 0;
-    }
+This is a small static site for "Clemente Brothers Commercial Services" created from your flyer content.
 
-    /* ===== Header ===== */
-    header {
-      background: #0f3d91;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 26px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+Quick start
+1. Download or clone the repository.
+2. Put these files at the repository root (replace existing `index.html` if you want).
+3. Run locally:
+   - Double-click `index.html` to open in your browser, or
+   - Start a simple server:
+     - Python 3: `python -m http.server 8000`
+     - Then open http://localhost:8000
 
-    /* ===== Hero / Banner ===== */
-    .hero {
-      background: url('https://images.pexels.com/photos/776615/pexels-photo-776615.jpeg') no-repeat center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-      margin-bottom: 30px;
-    }
-    .hero h1 {
-      color: white;
-      font-size: 48px;
-    }
+Files
+- `index.html` — main page (responsive).
+- `styles.css` — site styles.
+- `script.js` — small JS for nav and contact form.
+- `README.md` — this file.
 
-    /* ===== Services ===== */
-    .services {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-    }
-    .services h2 {
-      text-align: center;
-      color: #0f3d91;
-    }
-    .services-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .services-list div {
-      background: #eef2f7;
-      padding: 15px;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-    }
+Customize
+- Change the phone number in `index.html` (tel: links).
+- Set the actual email in `script.js` (already set to clementetiago186@gmail.com).
+- Replace hero image by changing the background URL in `styles.css` or `index.html`.
 
-    /* ===== What We Service ===== */
-    .service-areas {
-      margin-top: 20px;
-      display: grid;
-      gap: 10px;
-    }
+Deploy
+- Push to GitHub and enable GitHub Pages, or deploy to Netlify / Vercel for free hosting.
 
-    /* ===== Contact Section ===== */
-    .contact {
-      text-align: center;
-      background: #0f3d91;
-      color: white;
-      padding: 40px 20px;
-      border-radius: 8px;
-    }
-    .contact h2 {
-      margin-bottom: 15px;
-    }
-    .contact a {
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    CLEMENTE BROTHERS COMMERCIAL SERVICES
-  </header>
-
-  <section class="hero">
-    <h1>Professional Commercial Cleaning You Can Rely On</h1>
-  </section>
-
-  <div class="container">
-
-    <!-- SERVICES -->
-    <section class="services">
-      <h2>OUR SERVICES</h2>
-      <div class="services-list">
-        <div>Janitorial Cleaning</div>
-        <div>Restroom Sanitation</div>
-        <div>Trash Removal</div>
-        <div>Floor Care (Sweep, Mop, Vacuum)</div>
-        <div>Common-Area Maintenance</div>
-      </div>
-
-      <h2 style="margin-top:30px;">WE SERVICE:</h2>
-      <div class="service-areas">
-        <div>Office Buildings</div>
-        <div>Retail Plazas</div>
-        <div>Medical & Professional Offices</div>
-        <div>Commercial Properties</div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact">
-      <h2>NOW ACCEPTING NEW COMMERCIAL CLIENTS</h2>
-      <p>Locally Owned & Operated</p>
-      <p>Free Walkthroughs & Quotes Available</p>
-      <a href="tel:7323144695">📞 Call/Text: 732-314-4695</a>
-    </section>
-  </div>
-
-  <footer>
-    © 2025 Clemente Brothers Commercial Services
-  </footer>
-
-</body>
-</html>
+Notes
+- The contact form opens the user's email client (mailto). If you want inbound form submissions without relying on the user's email client, I can add a Formspree configuration or show how to connect a simple serverless endpoint.
+- If you'd like a multi-page site, gallery, or photo assets bundled, tell me which pages or images and I will create them.
