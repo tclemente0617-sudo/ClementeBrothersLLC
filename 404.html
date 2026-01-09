@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // SPA-friendly 404 fallback for GitHub Pages
+      (function() {
+        try {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', '/', true);
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                document.documentElement.innerHTML = xhr.responseText;
+                var scripts = document.documentElement.querySelectorAll('script');
+                for (var i = 0; i < scripts.length; i++) {
+                  var s = document.createElement('script');
+                  if (scripts[i].src) s.src = scripts[i].src;
+                  else s.text = scripts[i].textContent;
+                  document.head.appendChild(s);
+                }
+                history.replaceState({}, '', location.pathname + location.search + location.hash);
+              } else {
+                document.body.innerHTML = '<h1>404</h1><p>Page not found.</p>';
+              }
+            }
+          };
+          xhr.send();
+        } catch (e) {
+          document.body.innerHTML = '<h1>404</h1><p>Page not found.</p>';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <h1>Redirecting…</h1>
+    <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
+  </body>
+</html>
