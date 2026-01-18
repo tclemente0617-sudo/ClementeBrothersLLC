@@ -112,6 +112,10 @@ body{
   margin:20px 0;
 }
 
+/* About Us */
+.about-us p{margin:0 0 12px;line-height:1.6}
+.about-us p:last-of-type{margin-bottom:0}
+
 /* Services */
 .services-grid{
   display:grid;
@@ -166,14 +170,23 @@ body{
 .breadcrumb li:last-child{color:var(--muted)}
 
 /* Footer */
-.site-footer{padding:18px 0;margin-top:24px}
-.footer-inner{display:flex;gap:10px;align-items:center;justify-content:space-between;color:var(--muted)}
+.site-footer{padding:18px 0;margin-top:24px;background:#f3f4f6}
+.footer-inner{display:flex;gap:20px;align-items:center;justify-content:space-between;color:var(--muted);flex-wrap:wrap}
+.footer-left{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .footer-nav a{color:var(--muted);margin-left:10px;text-decoration:none}
+.footer-social{display:flex;align-items:center;gap:12px}
+.social-label{margin:0;font-weight:600;color:var(--muted);font-size:14px}
+.social-links{display:flex;gap:10px}
+.social-links a{color:var(--brand);transition:opacity 0.2s}
+.social-links a:hover{opacity:0.7}
 
 /* Responsive */
 @media (max-width:900px){
   .contact-grid{grid-template-columns:1fr}
   .brand .logo{height:46px}
+  .footer-inner{flex-direction:column;text-align:center}
+  .footer-left{flex-direction:column;text-align:center}
+  .footer-social{flex-direction:column}
 }
 @media (max-width:740px){
   .main-nav{display:none}

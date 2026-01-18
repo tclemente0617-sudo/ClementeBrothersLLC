@@ -26,11 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var name = encodeURIComponent(document.getElementById('name').value.trim());
+      var email = encodeURIComponent(document.getElementById('email').value.trim());
+      var phone = encodeURIComponent(document.getElementById('phone').value.trim());
       var company = encodeURIComponent(document.getElementById('company').value.trim());
       var message = encodeURIComponent(document.getElementById('message').value.trim());
       var to = 'clementetiago186@gmail.com'; // <-- Set to your preferred contact email
       var subject = encodeURIComponent('Website Inquiry from ' + (name || 'Website Visitor'));
       var body = 'Name: ' + (name || '') + '%0D%0A' +
+                 'Email: ' + (email || '') + '%0D%0A' +
+                 'Phone: ' + (phone || '') + '%0D%0A' +
                  'Company: ' + (company || '') + '%0D%0A%0D%0A' +
                  'Message:%0D%0A' + (message || '');
 
