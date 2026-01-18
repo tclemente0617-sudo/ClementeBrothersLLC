@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" aria-labelledby="logo-title" role="img">
+  <title id="logo-title">Clemente Brothers Services Logo</title>
+  <defs>
+    <style>
+      .logo-bg { fill: #0f3d91; }
+      .logo-text { fill: #ffffff; font-family: Arial, sans-serif; font-weight: bold; }
+      .logo-subtitle { fill: #e0e0e0; font-family: Arial, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="logo-bg" width="800" height="400" rx="8"/>
+  
+  <!-- CB Monogram -->
+  <g>
+    <text class="logo-text" x="400" y="180" font-size="140" text-anchor="middle">CB</text>
+  </g>
+  
+  <!-- Company Name -->
+  <text class="logo-text" x="400" y="250" font-size="42" text-anchor="middle">CLEMENTE BROTHERS</text>
+  <text class="logo-subtitle" x="400" y="290" font-size="28" text-anchor="middle">COMMERCIAL SERVICES</text>
+</svg>

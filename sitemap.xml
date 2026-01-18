@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Main Homepage -->
   <url>
     <loc>https://clementebrothersllc.com/</loc>
     <lastmod>2026-01-18</lastmod>
@@ -9,25 +11,36 @@
     <image:image>
       <image:loc>https://clementebrothersllc.com/assets/logo.png</image:loc>
       <image:title>Clemente Brothers Services Logo</image:title>
-      <image:caption>Clemente Brothers Commercial Cleaning Services</image:caption>
+      <image:caption>Commercial Cleaning and Janitorial Services in South River, NJ</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://clementebrothersllc.com/assets/logo.webp</image:loc>
+      <image:title>Clemente Brothers Services Logo WebP</image:title>
+      <image:caption>Optimized logo for faster loading</image:caption>
     </image:image>
   </url>
+  
+  <!-- Services Section -->
   <url>
     <loc>https://clementebrothersllc.com/#services</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Service Areas Section -->
   <url>
     <loc>https://clementebrothersllc.com/#areas</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Contact Section -->
   <url>
     <loc>https://clementebrothersllc.com/#contact</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
