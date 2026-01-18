@@ -561,6 +561,8 @@
       </div>
       
       <!-- Contact Form -->
+      <!-- IMPORTANT: Replace YOUR_FORM_ID with your actual Formspree form ID -->
+      <!-- See FORMSPREE_SETUP.md for setup instructions -->
       <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <h3>Request a Free Quote</h3>
         
@@ -588,7 +590,7 @@
         <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
         
         <!-- Formspree configuration -->
-        <input type="hidden" name="_next" value="/thank-you.html">
+        <input type="hidden" name="_next" value="https://clementebrothersservices.com/thank-you.html">
         <input type="hidden" name="_subject" value="New Quote Request from Website">
         
         <button type="submit" class="submit-button">Send Quote Request</button>
