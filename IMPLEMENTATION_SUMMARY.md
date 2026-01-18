@@ -57,7 +57,6 @@ Comprehensive redesign of Clemente Brothers Commercial Services website implemen
 - **Click-to-text**: `sms:7323144695` link with text icon
 - **Trust signals section** near top of page:
   - ✓ Locally Owned
-  - ✓ Fully Insured
   - ✓ Same Cleaner Every Visit
   - ✓ Month-to-Month Contracts
 
