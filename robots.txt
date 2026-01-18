@@ -17,7 +17,7 @@ Disallow: /tmp/
 Disallow: /*.json$
 
 # Sitemap location
-Sitemap: https://clementebrothersllc.com/sitemap.xml
+Sitemap: https://clementebrothersservices.com/sitemap.xml
 
 # Crawl-delay (helps prevent server overload)
 Crawl-delay: 1
