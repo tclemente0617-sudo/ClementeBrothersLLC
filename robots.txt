@@ -1,10 +1,23 @@
 # robots.txt for Clemente Brothers Services
+# Last updated: 2026-01-18
 
+# Allow all search engines
 User-agent: *
 Allow: /
+
+# Block nothing for primary crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow paths that shouldn't be indexed (if any)
+Disallow: /tmp/
+Disallow: /*.json$
 
 # Sitemap location
 Sitemap: https://clementebrothersllc.com/sitemap.xml
 
-# Crawl-delay (optional, helps prevent server overload)
+# Crawl-delay (helps prevent server overload)
 Crawl-delay: 1

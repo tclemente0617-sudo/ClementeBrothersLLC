@@ -17,6 +17,10 @@
   <meta property="og:title" content="Clemente Brothers Services - Commercial Cleaning & Janitorial Services | South River, NJ" />
   <meta property="og:description" content="Reliable commercial cleaning and janitorial services for offices, medical practices, and commercial buildings in South River, NJ and Middlesex County. Free walkthroughs available." />
   <meta property="og:image" content="https://clementebrothersllc.com/assets/logo.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="400" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Clemente Brothers Services - Commercial Cleaning Company Logo" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Clemente Brothers Services" />
   
@@ -26,6 +30,7 @@
   <meta name="twitter:title" content="Clemente Brothers Services - Commercial Cleaning & Janitorial Services | South River, NJ" />
   <meta name="twitter:description" content="Reliable commercial cleaning and janitorial services for offices, medical practices, and commercial buildings in South River, NJ and Middlesex County." />
   <meta name="twitter:image" content="https://clementebrothersllc.com/assets/logo.png" />
+  <meta name="twitter:image:alt" content="Clemente Brothers Services - Commercial Cleaning Company Logo" />
   
   <!-- Geo tags -->
   <meta name="geo.region" content="US-NJ" />
@@ -185,12 +190,16 @@
   </script>
 </head>
 <body>
+  <!-- Skip Navigation Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#">
+      <a class="brand" href="#" aria-label="Clemente Brothers Services - Home">
         <picture>
+          <source srcset="assets/logo.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
           <source srcset="assets/logo.webp" type="image/webp">
-          <img src="assets/logo.png" alt="Clemente Brothers logo" class="logo" width="160" height="80" />
+          <img src="assets/logo.png" alt="Clemente Brothers Services - Commercial Cleaning Logo" class="logo" width="160" height="80" loading="eager" />
         </picture>
         <span class="brand-text">CLEMENTE BROTHERS SERVICES</span>
       </a>
@@ -238,8 +247,8 @@
     </nav>
   </div>
 
-  <main>
-    <section class="hero" role="img" aria-label="Commercial cleaning hero image">
+  <main id="main-content" role="main">
+    <section class="hero" role="img" aria-label="Commercial cleaning services hero section with office background">
       <div class="hero-overlay">
         <!-- HERO SECTION -->
         <h1>Reliable commercial cleaning for South River &amp; Middlesex County</h1>
