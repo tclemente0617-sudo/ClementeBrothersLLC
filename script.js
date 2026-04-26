@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var el = document.getElementById('copy-year');
-  if (el) el.textContent = new Date().getFullYear();
-
   var navToggle = document.getElementById('navToggle');
-  var nav = document.getElementById('main-nav');
+  var nav = document.getElementById('mainNav');
+
   if (navToggle && nav) {
     navToggle.addEventListener('click', function () {
-      var expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', !expanded);
-      nav.style.display = expanded ? '' : 'block';
+      var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open', !expanded);
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
