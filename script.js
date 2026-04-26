@@ -1,42 +1,45 @@
-// Basic interactivity: toggle nav, form -> mailto, set footer year
-
 document.addEventListener('DOMContentLoaded', function () {
-  // Fill current year in footer
   var el = document.getElementById('copy-year');
   if (el) el.textContent = new Date().getFullYear();
 
-  // Mobile nav toggle
   var navToggle = document.getElementById('navToggle');
   var nav = document.getElementById('main-nav');
   if (navToggle && nav) {
     navToggle.addEventListener('click', function () {
       var expanded = this.getAttribute('aria-expanded') === 'true';
       this.setAttribute('aria-expanded', !expanded);
-      if (!expanded) {
-        nav.style.display = 'block';
-      } else {
-        nav.style.display = '';
-      }
+      nav.style.display = expanded ? '' : 'block';
     });
   }
 
-  // Contact form: builds a mailto: link and opens email client
-  var form = document.getElementById('contactForm');
+  var form = document.getElementById('bookingForm');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var name = encodeURIComponent(document.getElementById('name').value.trim());
-      var company = encodeURIComponent(document.getElementById('company').value.trim());
-      var message = encodeURIComponent(document.getElementById('message').value.trim());
-      var to = 'clementetiago186@gmail.com'; // <-- Set to your preferred contact email
-      var subject = encodeURIComponent('Website Inquiry from ' + (name || 'Website Visitor'));
-      var body = 'Name: ' + (name || '') + '%0D%0A' +
-                 'Company: ' + (company || '') + '%0D%0A%0D%0A' +
-                 'Message:%0D%0A' + (message || '');
 
-      // Build mailto and open
-      var mailto = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
-      window.location.href = mailto;
+      var name = encodeURIComponent(document.getElementById('name').value);
+      var phone = encodeURIComponent(document.getElementById('phone').value);
+      var email = encodeURIComponent(document.getElementById('email').value);
+      var company = encodeURIComponent(document.getElementById('company').value);
+      var town = encodeURIComponent(document.getElementById('town').value);
+      var service = encodeURIComponent(document.getElementById('serviceType').value);
+      var frequency = encodeURIComponent(document.getElementById('frequency').value);
+      var time = encodeURIComponent(document.getElementById('preferredTime').value);
+      var message = encodeURIComponent(document.getElementById('message').value);
+
+      var subject = encodeURIComponent('New Cleaning Quote Request');
+      var body =
+        'Name: ' + name + '%0D%0A' +
+        'Phone: ' + phone + '%0D%0A' +
+        'Email: ' + email + '%0D%0A' +
+        'Company: ' + company + '%0D%0A' +
+        'Location: ' + town + '%0D%0A' +
+        'Service: ' + service + '%0D%0A' +
+        'Frequency: ' + frequency + '%0D%0A' +
+        'Preferred Time: ' + time + '%0D%0A%0D%0A' +
+        'Details:%0D%0A' + message;
+
+      window.location.href = 'mailto:clementetiago186@gmail.com?subject=' + subject + '&body=' + body;
     });
   }
 });
