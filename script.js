@@ -22,27 +22,36 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      var name = encodeURIComponent(document.getElementById('name').value);
-      var phone = encodeURIComponent(document.getElementById('phone').value);
-      var email = encodeURIComponent(document.getElementById('email').value);
-      var company = encodeURIComponent(document.getElementById('company').value);
-      var town = encodeURIComponent(document.getElementById('town').value);
-      var service = encodeURIComponent(document.getElementById('serviceType').value);
-      var frequency = encodeURIComponent(document.getElementById('frequency').value);
-      var time = encodeURIComponent(document.getElementById('preferredTime').value);
-      var message = encodeURIComponent(document.getElementById('message').value);
+      function value(id) {
+        var el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+      }
 
-      var subject = encodeURIComponent('New Cleaning Quote Request');
-      var body =
-        'Name: ' + name + '%0D%0A' +
-        'Phone: ' + phone + '%0D%0A' +
-        'Email: ' + email + '%0D%0A' +
-        'Company: ' + company + '%0D%0A' +
-        'Location: ' + town + '%0D%0A' +
-        'Service: ' + service + '%0D%0A' +
-        'Frequency: ' + frequency + '%0D%0A' +
-        'Preferred Time: ' + time + '%0D%0A%0D%0A' +
-        'Details:%0D%0A' + message;
+      var name = value('name');
+      var company = value('company');
+      var phone = value('phone');
+      var email = value('email');
+      var officeAddress = value('officeAddress');
+      var businessType = value('businessType');
+      var squareFootage = value('squareFootage');
+      var frequency = value('frequency');
+      var walkthroughTime = value('walkthroughTime');
+      var message = value('message');
+
+      var subject = encodeURIComponent('New Free Office Cleaning Walkthrough Request');
+      var body = encodeURIComponent(
+        'New walkthrough request from Clemente Brothers website\n\n' +
+        'Full Name: ' + name + '\n' +
+        'Company Name: ' + company + '\n' +
+        'Phone Number: ' + phone + '\n' +
+        'Email Address: ' + email + '\n' +
+        'Office Address: ' + officeAddress + '\n' +
+        'Business Type: ' + businessType + '\n' +
+        'Approximate Square Footage: ' + squareFootage + '\n' +
+        'Cleaning Frequency: ' + frequency + '\n' +
+        'Best Time for Walkthrough: ' + walkthroughTime + '\n\n' +
+        'Additional Notes:\n' + message
+      );
 
       window.location.href = 'mailto:clementetiago186@gmail.com?subject=' + subject + '&body=' + body;
     });
